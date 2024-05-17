@@ -1,12 +1,10 @@
-.body{
+body{
     display: flex;
-    height: 100%;
 }
 h1{
     text-align: center;
 }
 .content{
-    height: 100%;
     width: 100%;
     text-align: start;
     font-size: 25px;
@@ -15,7 +13,6 @@ h1{
 }
 .sidebar{
     background-color:#660033;
-    height: 100%;
     width: 350px;
     text-align: center;
     display: flex;
@@ -23,6 +20,7 @@ h1{
     align-items:center;
     font-size: 20px;
     color: white;
+    height: 100vh;
 }
 .active-menu{
     background-color: #ffccdc;
@@ -42,6 +40,18 @@ h1{
     margin-bottom: 10px;
     width: fit-content;
 }
+.bottom-bar{
+    background-color: #660033;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right:0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
 .img{
     height: 40px;
     width:40px;
@@ -52,15 +62,19 @@ h1{
     .sidebar{
         display: none;
     }
+
 }@media screen and (min-width :601px) and (max-width:768px){
     .sidebar{
+        display:none;
+    }
+
+}
+@media screen and (min-width :769px) and (max-width:992px){
+    .bottom-bar{
         display: none;
     }
 }
-@media screen and (min-width :769px) and (max-width:992px){
-
-}
  @media screen and (min-width :993px) and (max-width:1250px){
-
-}
-
+   .bottom-bar{
+    display: none;
+   } }
